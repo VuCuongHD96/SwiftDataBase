@@ -9,9 +9,9 @@ import SwiftData
 
 struct PersonRequest: SwiftDataBaseRequestType {
     typealias T = Person
-    var request: FetchDescriptor<Person>
+    var request: FetchDescriptor<T>
     
     init() {
-        self.request = FetchDescriptor<Person>()
+        self.request = FetchDescriptor<T>()
     }
 }

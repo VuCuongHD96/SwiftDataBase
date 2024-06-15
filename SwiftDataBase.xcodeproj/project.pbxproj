@@ -14,6 +14,7 @@
 		96F657792C1DD12B00476EDC /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F657772C1DD12B00476EDC /* Person.swift */; };
 		96F657822C1DD84300476EDC /* SwiftDataBaseRequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F6577F2C1DD84300476EDC /* SwiftDataBaseRequestType.swift */; };
 		96F657832C1DD84300476EDC /* PersonRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F657802C1DD84300476EDC /* PersonRequest.swift */; };
+		96F657862C1DD9A300476EDC /* SwiftDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F657842C1DD9A300476EDC /* SwiftDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		96F657772C1DD12B00476EDC /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		96F6577F2C1DD84300476EDC /* SwiftDataBaseRequestType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftDataBaseRequestType.swift; sourceTree = "<group>"; };
 		96F657802C1DD84300476EDC /* PersonRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonRequest.swift; sourceTree = "<group>"; };
+		96F657842C1DD9A300476EDC /* SwiftDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 		960713392C1D2ABF00EC5433 /* SwiftDataBase */ = {
 			isa = PBXGroup;
 			children = (
+				96F657852C1DD9A300476EDC /* DataBase */,
 				96F657812C1DD84300476EDC /* Request */,
 				96F657782C1DD12B00476EDC /* Model */,
 				9607133A2C1D2ABF00EC5433 /* SwiftDataBaseApp.swift */,
@@ -92,6 +95,15 @@
 			);
 			name = Request;
 			path = CoreData/Request;
+			sourceTree = "<group>";
+		};
+		96F657852C1DD9A300476EDC /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				96F657842C1DD9A300476EDC /* SwiftDataManager.swift */,
+			);
+			name = DataBase;
+			path = CoreData/DataBase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +179,7 @@
 				96F657792C1DD12B00476EDC /* Person.swift in Sources */,
 				9607133D2C1D2ABF00EC5433 /* ContentView.swift in Sources */,
 				9607133B2C1D2ABF00EC5433 /* SwiftDataBaseApp.swift in Sources */,
+				96F657862C1DD9A300476EDC /* SwiftDataManager.swift in Sources */,
 				96F657822C1DD84300476EDC /* SwiftDataBaseRequestType.swift in Sources */,
 				96F657832C1DD84300476EDC /* PersonRequest.swift in Sources */,
 			);
