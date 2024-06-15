@@ -11,6 +11,12 @@
 		9607133D2C1D2ABF00EC5433 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9607133C2C1D2ABF00EC5433 /* ContentView.swift */; };
 		9607133F2C1D2AC100EC5433 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9607133E2C1D2AC100EC5433 /* Assets.xcassets */; };
 		960713422C1D2AC100EC5433 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 960713412C1D2AC100EC5433 /* Preview Assets.xcassets */; };
+		9607134A2C1D2AE800EC5433 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960713492C1D2AE800EC5433 /* Person.swift */; };
+		9607134C2C1D2C6100EC5433 /* SwiftDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9607134B2C1D2C6100EC5433 /* SwiftDataManager.swift */; };
+		96F657612C1DC0A700476EDC /* CoreDataBaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F657602C1DC0A700476EDC /* CoreDataBaseRequest.swift */; };
+		96F657632C1DC0BD00476EDC /* PersonRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F657622C1DC0BD00476EDC /* PersonRequest.swift */; };
+		96F657752C1DCF9400476EDC /* PersonRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F657722C1DCF9400476EDC /* PersonRepository.swift */; };
+		96F657762C1DCF9400476EDC /* SwiftDataBaseRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F657732C1DCF9400476EDC /* SwiftDataBaseRepositoryType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,12 @@
 		9607133C2C1D2ABF00EC5433 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9607133E2C1D2AC100EC5433 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		960713412C1D2AC100EC5433 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		960713492C1D2AE800EC5433 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		9607134B2C1D2C6100EC5433 /* SwiftDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataManager.swift; sourceTree = "<group>"; };
+		96F657602C1DC0A700476EDC /* CoreDataBaseRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataBaseRequest.swift; sourceTree = "<group>"; };
+		96F657622C1DC0BD00476EDC /* PersonRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRequest.swift; sourceTree = "<group>"; };
+		96F657722C1DCF9400476EDC /* PersonRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonRepository.swift; sourceTree = "<group>"; };
+		96F657732C1DCF9400476EDC /* SwiftDataBaseRepositoryType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftDataBaseRepositoryType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +63,7 @@
 		960713392C1D2ABF00EC5433 /* SwiftDataBase */ = {
 			isa = PBXGroup;
 			children = (
+				960713482C1D2ADB00EC5433 /* CoreData */,
 				9607133A2C1D2ABF00EC5433 /* SwiftDataBaseApp.swift */,
 				9607133C2C1D2ABF00EC5433 /* ContentView.swift */,
 				9607133E2C1D2AC100EC5433 /* Assets.xcassets */,
@@ -65,6 +78,51 @@
 				960713412C1D2AC100EC5433 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		960713482C1D2ADB00EC5433 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				96F657742C1DCF9400476EDC /* Repository */,
+				96F6575F2C1DBFEE00476EDC /* Request */,
+				96F6575E2C1DBFDB00476EDC /* Model */,
+				96F6575D2C1DBFCD00476EDC /* DataBase */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		96F6575D2C1DBFCD00476EDC /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				9607134B2C1D2C6100EC5433 /* SwiftDataManager.swift */,
+			);
+			path = DataBase;
+			sourceTree = "<group>";
+		};
+		96F6575E2C1DBFDB00476EDC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				960713492C1D2AE800EC5433 /* Person.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		96F6575F2C1DBFEE00476EDC /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				96F657602C1DC0A700476EDC /* CoreDataBaseRequest.swift */,
+				96F657622C1DC0BD00476EDC /* PersonRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		96F657742C1DCF9400476EDC /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				96F657722C1DCF9400476EDC /* PersonRepository.swift */,
+				96F657732C1DCF9400476EDC /* SwiftDataBaseRepositoryType.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +195,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96F657752C1DCF9400476EDC /* PersonRepository.swift in Sources */,
+				9607134A2C1D2AE800EC5433 /* Person.swift in Sources */,
 				9607133D2C1D2ABF00EC5433 /* ContentView.swift in Sources */,
+				96F657762C1DCF9400476EDC /* SwiftDataBaseRepositoryType.swift in Sources */,
+				96F657632C1DC0BD00476EDC /* PersonRequest.swift in Sources */,
+				96F657612C1DC0A700476EDC /* CoreDataBaseRequest.swift in Sources */,
+				9607134C2C1D2C6100EC5433 /* SwiftDataManager.swift in Sources */,
 				9607133B2C1D2ABF00EC5433 /* SwiftDataBaseApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
