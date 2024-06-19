@@ -11,6 +11,13 @@
 		9607133D2C1D2ABF00EC5433 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9607133C2C1D2ABF00EC5433 /* ContentView.swift */; };
 		9607133F2C1D2AC100EC5433 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9607133E2C1D2AC100EC5433 /* Assets.xcassets */; };
 		960713422C1D2AC100EC5433 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 960713412C1D2AC100EC5433 /* Preview Assets.xcassets */; };
+		960E24BD2C232E280096ED58 /* ActivityTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960E24B62C232E280096ED58 /* ActivityTracker.swift */; };
+		960E24BE2C232E280096ED58 /* CancelBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960E24B72C232E280096ED58 /* CancelBag.swift */; };
+		960E24BF2C232E280096ED58 /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960E24B82C232E280096ED58 /* Driver.swift */; };
+		960E24C02C232E280096ED58 /* ErrorTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960E24B92C232E280096ED58 /* ErrorTracker.swift */; };
+		960E24C12C232E280096ED58 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960E24BA2C232E280096ED58 /* Observable.swift */; };
+		960E24C22C232E280096ED58 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960E24BB2C232E280096ED58 /* ViewModel.swift */; };
+		9648CA432C5DE0DE00BF6CA2 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9648CA422C5DE0DE00BF6CA2 /* ContentViewModel.swift */; };
 		96F4DD532C2080F300AEC8B4 /* PersonRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F4DD502C2080F300AEC8B4 /* PersonRepository.swift */; };
 		96F4DD542C2080F300AEC8B4 /* SwiftDataBaseRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F4DD512C2080F300AEC8B4 /* SwiftDataBaseRepositoryType.swift */; };
 		96F657792C1DD12B00476EDC /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F657772C1DD12B00476EDC /* Person.swift */; };
@@ -25,6 +32,13 @@
 		9607133C2C1D2ABF00EC5433 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9607133E2C1D2AC100EC5433 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		960713412C1D2AC100EC5433 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		960E24B62C232E280096ED58 /* ActivityTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityTracker.swift; sourceTree = "<group>"; };
+		960E24B72C232E280096ED58 /* CancelBag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CancelBag.swift; sourceTree = "<group>"; };
+		960E24B82C232E280096ED58 /* Driver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
+		960E24B92C232E280096ED58 /* ErrorTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorTracker.swift; sourceTree = "<group>"; };
+		960E24BA2C232E280096ED58 /* Observable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		960E24BB2C232E280096ED58 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		9648CA422C5DE0DE00BF6CA2 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		96F4DD502C2080F300AEC8B4 /* PersonRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonRepository.swift; sourceTree = "<group>"; };
 		96F4DD512C2080F300AEC8B4 /* SwiftDataBaseRepositoryType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftDataBaseRepositoryType.swift; sourceTree = "<group>"; };
 		96F657772C1DD12B00476EDC /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
@@ -63,12 +77,14 @@
 		960713392C1D2ABF00EC5433 /* SwiftDataBase */ = {
 			isa = PBXGroup;
 			children = (
+				960E24BC2C232E280096ED58 /* Architecture */,
 				96F4DD522C2080F300AEC8B4 /* Repository */,
 				96F657852C1DD9A300476EDC /* DataBase */,
 				96F657812C1DD84300476EDC /* Request */,
 				96F657782C1DD12B00476EDC /* Model */,
 				9607133A2C1D2ABF00EC5433 /* SwiftDataBaseApp.swift */,
 				9607133C2C1D2ABF00EC5433 /* ContentView.swift */,
+				9648CA422C5DE0DE00BF6CA2 /* ContentViewModel.swift */,
 				9607133E2C1D2AC100EC5433 /* Assets.xcassets */,
 				960713402C1D2AC100EC5433 /* Preview Content */,
 			);
@@ -83,11 +99,24 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		960E24BC2C232E280096ED58 /* Architecture */ = {
+			isa = PBXGroup;
+			children = (
+				960E24B62C232E280096ED58 /* ActivityTracker.swift */,
+				960E24B72C232E280096ED58 /* CancelBag.swift */,
+				960E24B82C232E280096ED58 /* Driver.swift */,
+				960E24B92C232E280096ED58 /* ErrorTracker.swift */,
+				960E24BA2C232E280096ED58 /* Observable.swift */,
+				960E24BB2C232E280096ED58 /* ViewModel.swift */,
+			);
+			path = Architecture;
+			sourceTree = "<group>";
+		};
 		96F4DD522C2080F300AEC8B4 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				96F4DD502C2080F300AEC8B4 /* PersonRepository.swift */,
 				96F4DD512C2080F300AEC8B4 /* SwiftDataBaseRepositoryType.swift */,
+				96F4DD502C2080F300AEC8B4 /* PersonRepository.swift */,
 			);
 			name = Repository;
 			path = CoreData/Repository;
@@ -191,14 +220,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				960E24C12C232E280096ED58 /* Observable.swift in Sources */,
+				960E24BF2C232E280096ED58 /* Driver.swift in Sources */,
 				96F4DD542C2080F300AEC8B4 /* SwiftDataBaseRepositoryType.swift in Sources */,
 				96F657792C1DD12B00476EDC /* Person.swift in Sources */,
 				9607133D2C1D2ABF00EC5433 /* ContentView.swift in Sources */,
 				9607133B2C1D2ABF00EC5433 /* SwiftDataBaseApp.swift in Sources */,
+				960E24C22C232E280096ED58 /* ViewModel.swift in Sources */,
 				96F657862C1DD9A300476EDC /* SwiftDataManager.swift in Sources */,
+				960E24BD2C232E280096ED58 /* ActivityTracker.swift in Sources */,
+				960E24C02C232E280096ED58 /* ErrorTracker.swift in Sources */,
+				960E24BE2C232E280096ED58 /* CancelBag.swift in Sources */,
 				96F657822C1DD84300476EDC /* SwiftDataBaseRequestType.swift in Sources */,
 				96F657832C1DD84300476EDC /* PersonRequest.swift in Sources */,
 				96F4DD532C2080F300AEC8B4 /* PersonRepository.swift in Sources */,
+				9648CA432C5DE0DE00BF6CA2 /* ContentViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
