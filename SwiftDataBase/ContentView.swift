@@ -9,15 +9,15 @@ import SwiftUI
 
 struct ContentView: View {
     
-    let repository: any PersonRepositoryType = PersonRepository()
+    let repository = PersonRepository()
     @State private var person: [Person] = []
     
     var body: some View {
         VStack {
             Button("Add Person") {
                 repository.addPerson()
-                person = repository.getPersonList()
-                repository.swiftDataManager.save()
+//                person = repository.getPersonList()
+//                repository.swiftDataManager.save()
             }
             Image(systemName: "globe")
                 .imageScale(.large)
@@ -31,15 +31,15 @@ struct ContentView: View {
                     indexSet.forEach {
                         let person = person[$0]
                         repository.delete(object: person)
-                        repository.swiftDataManager.save()
+//                        repository.swiftDataManager.save()
                     }
                 })
             }
         }
         .padding()
         .onAppear {
-            person = repository.getPersonList()
-            repository.swiftDataManager.save()
+//            person = repository.getPersonList()
+//            repository.swiftDataManager.save()
         }
     }
 }

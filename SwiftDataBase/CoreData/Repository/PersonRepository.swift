@@ -8,28 +8,19 @@
 import Foundation
 import SwiftData
 
-protocol PersonRepositoryType: SwiftDataBaseRepositoryType where T == Person {
-    
-    func getPersonList() -> [T]
-    func addPerson()
-    func delete(object: T)
-}
+struct PersonRepository: SwiftDataBaseRepositoryType {
 
-struct PersonRepository: PersonRepositoryType {
-    
-    var swiftDataManager: SwiftDataManager = SwiftDataManager(modelType: T.self)
+    typealias T = Person
 
-    func getPersonList() -> [T] {
+    var swiftDataManager: SwiftDataManager<Person> = .init()
+
+    func getPersonList() -> Observable<[T]> {
         let request = PersonRequest()
-        return swiftDataManager.fetch(input: request)
+        return getList(input: request)
     }
     
     func addPerson() {
-        let person = Person(name: "ABC")
+        let person = T(name: "ABC")
         swiftDataManager.insert(object: person)
-    }
-    
-    func delete(object: T) {
-        swiftDataManager.delete(object: object)
     }
 }

@@ -5,32 +5,51 @@
 //  Created by Work on 15/6/24.
 //
 
-import Foundation
+import Combine
 import SwiftData
 
-struct SwiftDataManager {
-    
-    typealias T = PersistentModel
+struct SwiftDataManager<T: PersistentModel> {
+    let container: ModelContainer
     private let context: ModelContext
     
-    init(modelType: any T.Type) {
-        let container = (try? ModelContainer(for: modelType))!
+    init() {
+        do {
+            self.container = try ModelContainer(for: T.self)
+        } catch(let error) {
+            fatalError("Unresolved error \(error), \(error.localizedDescription)")
+        }
         context = ModelContext(container)
     }
     
-    func fetch<R: SwiftDataBaseRequestType>(input: R) -> [R.T] {
-        return try! context.fetch(input.request)
+    func fetch<R: SwiftDataBaseRequestType>(input: R) -> Observable<[R.T]> {
+        Future<[R.T], Error> { promise in
+            do {
+                let itemArray = try context.fetch(input.request)
+                promise(.success(itemArray))
+            } catch(let error) {
+                promise(.failure(error))
+            }
+        }
+        .eraseToAnyPublisher()
     }
     
-    func insert(object: any T) {
+    func insert(object: T) {
         context.insert(object)
     }
     
-    func delete(object: any T) {
+    func delete(object: T) {
         context.delete(object)
     }
-
-    func save() {
-        try? context.save()
+    
+    func save() -> Observable<Void> {
+        Future<Void, Error> { promise in
+            do {
+                try context.save()
+                promise(.success(Void()))
+            } catch(let error) {
+                promise(.failure(error))
+            }
+        }
+        .eraseToAnyPublisher()
     }
 }

@@ -9,7 +9,21 @@ import Combine
 import SwiftData
 
 protocol SwiftDataBaseRepositoryType {
+    associatedtype T: PersistentModel
+    var swiftDataManager: SwiftDataManager<T> { get set }
+}
+
+extension SwiftDataBaseRepositoryType {
     
-    associatedtype T = any PersistentModel
-    var swiftDataManager: SwiftDataManager { get set }
+    func getList<R: SwiftDataBaseRequestType>(input: R) -> Observable<[R.T]> {
+        return swiftDataManager.fetch(input: input)
+    }
+    
+    func insert(object: T) {
+        swiftDataManager.insert(object: object)
+    }
+    
+    func delete(object: T) {
+        swiftDataManager.delete(object: object)
+    }
 }
