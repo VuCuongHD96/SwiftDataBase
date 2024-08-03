@@ -8,42 +8,45 @@
 import SwiftUI
 
 struct ContentView: View {
+
+    let input: ContentViewModel.Input
+    @ObservedObject var output: ContentViewModel.Output
+    let cancelBag = CancelBag()
     
-    let repository: any PersonRepositoryType = PersonRepository()
-    @State private var person: [Person] = []
+    init(viewModel: ContentViewModel) {
+        let input = ContentViewModel.Input()
+        output = viewModel.transform(input, cancelBag: cancelBag)
+        self.input = input
+    }
     
     var body: some View {
         VStack {
             Button("Add Person") {
-                repository.addPerson()
-                person = repository.getPersonList()
-                repository.swiftDataManager.save()
+                input.addAction.send()
             }
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
             Text("Hello, world!")
             List {
-                ForEach(person) {
+                ForEach(output.personList) {
                     Text($0.name)
                 }
                 .onDelete(perform: { indexSet in
                     indexSet.forEach {
-                        let person = person[$0]
-                        repository.delete(object: person)
-                        repository.swiftDataManager.save()
+                        let person = output.personList[$0]
+                        input.deleteAction.send(person)
                     }
                 })
             }
         }
         .padding()
         .onAppear {
-            person = repository.getPersonList()
-            repository.swiftDataManager.save()
+            input.loadTrigger.send()
         }
     }
 }
 
 #Preview {
-    ContentView()
+    ContentView(viewModel: ContentViewModel())
 }
