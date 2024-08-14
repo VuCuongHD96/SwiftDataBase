@@ -18,3 +18,14 @@ class PersonStorage: Identifiable {
         self.name = name
     }
 }
+
+@Model
+class SchoolStorage: Identifiable {
+    
+    var id = UUID().uuidString
+    var name: String
+    
+    init(name: String) {
+        self.name = name
+    }
+}

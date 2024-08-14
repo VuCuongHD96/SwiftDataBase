@@ -9,6 +9,17 @@ import SwiftData
 
 struct PersonRequest: SwiftDataBaseRequestType {
     typealias T = PersonStorage
+
+    var request: FetchDescriptor<T>
+    
+    init() {
+        self.request = FetchDescriptor<T>()
+    }
+}
+
+struct SchoolRequest: SwiftDataBaseRequestType {
+    typealias T = SchoolStorage
+
     var request: FetchDescriptor<T>
     
     init() {
