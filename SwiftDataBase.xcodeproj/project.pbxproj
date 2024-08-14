@@ -18,9 +18,12 @@
 		960E24C12C232E280096ED58 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960E24BA2C232E280096ED58 /* Observable.swift */; };
 		960E24C22C232E280096ED58 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960E24BB2C232E280096ED58 /* ViewModel.swift */; };
 		9648CA432C5DE0DE00BF6CA2 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9648CA422C5DE0DE00BF6CA2 /* ContentViewModel.swift */; };
+		96D0675B2C6CF1E800704949 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D0675A2C6CF1E800704949 /* Person.swift */; };
+		96D0675F2C6CF3D700704949 /* PersonRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D0675E2C6CF3D700704949 /* PersonRepositoryType.swift */; };
+		96D067612C6D03FD00704949 /* PersonViewDataTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D067602C6D03FD00704949 /* PersonViewDataTranslator.swift */; };
 		96F4DD532C2080F300AEC8B4 /* PersonRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F4DD502C2080F300AEC8B4 /* PersonRepository.swift */; };
 		96F4DD542C2080F300AEC8B4 /* SwiftDataBaseRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F4DD512C2080F300AEC8B4 /* SwiftDataBaseRepositoryType.swift */; };
-		96F657792C1DD12B00476EDC /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F657772C1DD12B00476EDC /* Person.swift */; };
+		96F657792C1DD12B00476EDC /* PersonStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F657772C1DD12B00476EDC /* PersonStorage.swift */; };
 		96F657822C1DD84300476EDC /* SwiftDataBaseRequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F6577F2C1DD84300476EDC /* SwiftDataBaseRequestType.swift */; };
 		96F657832C1DD84300476EDC /* PersonRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F657802C1DD84300476EDC /* PersonRequest.swift */; };
 		96F657862C1DD9A300476EDC /* SwiftDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F657842C1DD9A300476EDC /* SwiftDataManager.swift */; };
@@ -39,9 +42,12 @@
 		960E24BA2C232E280096ED58 /* Observable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		960E24BB2C232E280096ED58 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		9648CA422C5DE0DE00BF6CA2 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		96D0675A2C6CF1E800704949 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		96D0675E2C6CF3D700704949 /* PersonRepositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRepositoryType.swift; sourceTree = "<group>"; };
+		96D067602C6D03FD00704949 /* PersonViewDataTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewDataTranslator.swift; sourceTree = "<group>"; };
 		96F4DD502C2080F300AEC8B4 /* PersonRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonRepository.swift; sourceTree = "<group>"; };
 		96F4DD512C2080F300AEC8B4 /* SwiftDataBaseRepositoryType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftDataBaseRepositoryType.swift; sourceTree = "<group>"; };
-		96F657772C1DD12B00476EDC /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		96F657772C1DD12B00476EDC /* PersonStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonStorage.swift; sourceTree = "<group>"; };
 		96F6577F2C1DD84300476EDC /* SwiftDataBaseRequestType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftDataBaseRequestType.swift; sourceTree = "<group>"; };
 		96F657802C1DD84300476EDC /* PersonRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonRequest.swift; sourceTree = "<group>"; };
 		96F657842C1DD9A300476EDC /* SwiftDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftDataManager.swift; sourceTree = "<group>"; };
@@ -77,13 +83,12 @@
 		960713392C1D2ABF00EC5433 /* SwiftDataBase */ = {
 			isa = PBXGroup;
 			children = (
+				96D067592C6CF1B400704949 /* Domain */,
+				96D067582C6CF1A200704949 /* Infratructure */,
 				960E24BC2C232E280096ED58 /* Architecture */,
-				96F4DD522C2080F300AEC8B4 /* Repository */,
-				96F657852C1DD9A300476EDC /* DataBase */,
-				96F657812C1DD84300476EDC /* Request */,
-				96F657782C1DD12B00476EDC /* Model */,
 				9607133A2C1D2ABF00EC5433 /* SwiftDataBaseApp.swift */,
 				9607133C2C1D2ABF00EC5433 /* ContentView.swift */,
+				96D067602C6D03FD00704949 /* PersonViewDataTranslator.swift */,
 				9648CA422C5DE0DE00BF6CA2 /* ContentViewModel.swift */,
 				9607133E2C1D2AC100EC5433 /* Assets.xcassets */,
 				960713402C1D2AC100EC5433 /* Preview Content */,
@@ -112,23 +117,49 @@
 			path = Architecture;
 			sourceTree = "<group>";
 		};
+		96D067582C6CF1A200704949 /* Infratructure */ = {
+			isa = PBXGroup;
+			children = (
+				96D0675C2C6CF32000704949 /* Storage */,
+			);
+			path = Infratructure;
+			sourceTree = "<group>";
+		};
+		96D067592C6CF1B400704949 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				96D0675A2C6CF1E800704949 /* Person.swift */,
+				96D0675E2C6CF3D700704949 /* PersonRepositoryType.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		96D0675C2C6CF32000704949 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				96F657852C1DD9A300476EDC /* DataBase */,
+				96F657812C1DD84300476EDC /* Request */,
+				96F4DD522C2080F300AEC8B4 /* Repository */,
+				96D0675D2C6CF32900704949 /* Model */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		96D0675D2C6CF32900704949 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				96F657772C1DD12B00476EDC /* PersonStorage.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		96F4DD522C2080F300AEC8B4 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
 				96F4DD512C2080F300AEC8B4 /* SwiftDataBaseRepositoryType.swift */,
 				96F4DD502C2080F300AEC8B4 /* PersonRepository.swift */,
 			);
-			name = Repository;
-			path = CoreData/Repository;
-			sourceTree = "<group>";
-		};
-		96F657782C1DD12B00476EDC /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				96F657772C1DD12B00476EDC /* Person.swift */,
-			);
-			name = Model;
-			path = CoreData/Model;
+			path = Repository;
 			sourceTree = "<group>";
 		};
 		96F657812C1DD84300476EDC /* Request */ = {
@@ -137,8 +168,7 @@
 				96F6577F2C1DD84300476EDC /* SwiftDataBaseRequestType.swift */,
 				96F657802C1DD84300476EDC /* PersonRequest.swift */,
 			);
-			name = Request;
-			path = CoreData/Request;
+			path = Request;
 			sourceTree = "<group>";
 		};
 		96F657852C1DD9A300476EDC /* DataBase */ = {
@@ -146,8 +176,7 @@
 			children = (
 				96F657842C1DD9A300476EDC /* SwiftDataManager.swift */,
 			);
-			name = DataBase;
-			path = CoreData/DataBase;
+			path = DataBase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,17 +252,20 @@
 				960E24C12C232E280096ED58 /* Observable.swift in Sources */,
 				960E24BF2C232E280096ED58 /* Driver.swift in Sources */,
 				96F4DD542C2080F300AEC8B4 /* SwiftDataBaseRepositoryType.swift in Sources */,
-				96F657792C1DD12B00476EDC /* Person.swift in Sources */,
+				96F657792C1DD12B00476EDC /* PersonStorage.swift in Sources */,
 				9607133D2C1D2ABF00EC5433 /* ContentView.swift in Sources */,
+				96D0675F2C6CF3D700704949 /* PersonRepositoryType.swift in Sources */,
 				9607133B2C1D2ABF00EC5433 /* SwiftDataBaseApp.swift in Sources */,
 				960E24C22C232E280096ED58 /* ViewModel.swift in Sources */,
 				96F657862C1DD9A300476EDC /* SwiftDataManager.swift in Sources */,
+				96D067612C6D03FD00704949 /* PersonViewDataTranslator.swift in Sources */,
 				960E24BD2C232E280096ED58 /* ActivityTracker.swift in Sources */,
 				960E24C02C232E280096ED58 /* ErrorTracker.swift in Sources */,
 				960E24BE2C232E280096ED58 /* CancelBag.swift in Sources */,
 				96F657822C1DD84300476EDC /* SwiftDataBaseRequestType.swift in Sources */,
 				96F657832C1DD84300476EDC /* PersonRequest.swift in Sources */,
 				96F4DD532C2080F300AEC8B4 /* PersonRepository.swift in Sources */,
+				96D0675B2C6CF1E800704949 /* Person.swift in Sources */,
 				9648CA432C5DE0DE00BF6CA2 /* ContentViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,6 +408,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -405,6 +438,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -6,10 +6,17 @@
 //
 
 import SwiftUI
+import SwiftData
+
+struct PersonViewData: Identifiable {
+    
+    let id: String
+    let name: String
+}
 
 struct ContentView: View {
 
-    let input: ContentViewModel.Input
+    @ObservedObject var input: ContentViewModel.Input
     @ObservedObject var output: ContentViewModel.Output
     let cancelBag = CancelBag()
     
@@ -21,6 +28,7 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
+            TextField("Nhập tên người", text: $input.personName)
             Button("Add Person") {
                 input.addAction.send()
             }
@@ -35,7 +43,7 @@ struct ContentView: View {
                 .onDelete(perform: { indexSet in
                     indexSet.forEach {
                         let person = output.personList[$0]
-                        input.deleteAction.send(person)
+                        input.deleteAction.send(person.id)
                     }
                 })
             }

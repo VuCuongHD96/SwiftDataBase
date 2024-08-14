@@ -8,7 +8,7 @@
 import SwiftData
 
 struct PersonRequest: SwiftDataBaseRequestType {
-    typealias T = Person
+    typealias T = PersonStorage
     var request: FetchDescriptor<T>
     
     init() {

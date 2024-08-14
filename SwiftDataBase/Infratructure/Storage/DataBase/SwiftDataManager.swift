@@ -7,6 +7,7 @@
 
 import Combine
 import SwiftData
+import Foundation
 
 struct SwiftDataManager<T: PersistentModel> {
     let container: ModelContainer
@@ -39,6 +40,15 @@ struct SwiftDataManager<T: PersistentModel> {
     
     func delete(object: T) {
         context.delete(object)
+        
+    }
+    
+    func delete(model: T.Type, where predicate: Predicate<T>) {
+        do {
+           try context.delete(model: T.self, where: predicate)
+        } catch {
+            
+        }
     }
     
     func save() -> Observable<Void> {
