@@ -11,7 +11,10 @@ import SwiftUI
 struct SwiftDataBaseApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(viewModel: ContentViewModel())
+            TabView {
+                ContentView(viewModel: ContentViewModel())
+                SchoolView()
+            }
         }
     }
 }
