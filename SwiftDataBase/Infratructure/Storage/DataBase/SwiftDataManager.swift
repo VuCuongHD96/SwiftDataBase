@@ -22,6 +22,8 @@ struct SwiftDataManager<T: PersistentModel> {
         context = ModelContext(container)
     }
     
+    
+    
     func fetch<R: SwiftDataBaseRequestType>(input: R) -> Observable<[R.T]> {
         Future<[R.T], Error> { promise in
             do {
@@ -40,12 +42,11 @@ struct SwiftDataManager<T: PersistentModel> {
     
     func delete(object: T) {
         context.delete(object)
-        
     }
     
     func delete(model: T.Type, where predicate: Predicate<T>) {
         do {
-           try context.delete(model: T.self, where: predicate)
+            try context.delete(model: T.self, where: predicate)
         } catch {
             
         }
@@ -61,5 +62,35 @@ struct SwiftDataManager<T: PersistentModel> {
             }
         }
         .eraseToAnyPublisher()
+    }
+}
+
+extension SwiftDataManager {
+    
+//    var array: any PersistentModel.Type... {
+//        PersonStorage.self, SchoolStorage.self
+//    }
+    
+//    func abc() -> any PersistentModel.Type {
+//        PersonStorage.self, SchoolStorage.self
+//    }
+    
+//    func createModelContainer(forTypes: [any PersistentModel.Type]) -> ModelContainer {
+//        return ModelContainer(for: forTypes)
+//    }
+    
+//    func abc(for forTypes: any PersistentModel.Type...) {
+//        ModelContainer(
+//            for: forTypes
+//        )
+//    }
+}
+
+struct ModelContainerMaker {
+    
+    static func make() throws -> ModelContainer {
+        try ModelContainer(
+            for: PersonStorage.self, SchoolStorage.self
+        )
     }
 }
