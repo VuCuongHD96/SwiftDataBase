@@ -9,28 +9,31 @@ import Combine
 
 struct ContentViewModel: ViewModel {
     
-    let repository = PersonRepository()
+    let repository: PersonRepositoryType = PersonRepository()
 }
 
 extension ContentViewModel {
     
-    struct Input {
+    class Input: ObservableObject {
         var addAction = PassthroughSubject<Void, Never>()
         var loadTrigger = PassthroughSubject<Void, Never>()
-        var deleteAction = PassthroughSubject<Person, Never>()
+        var deleteAction = PassthroughSubject<String, Never>()
+        @Published var personName = ""
     }
     
     class Output: ObservableObject {
-        @Published var personList: [Person] = []
+        @Published var personList: [PersonViewData] = []
     }
     
     func transform(_ input: Input, cancelBag: CancelBag) -> Output {
         let output = Output()
         
         let addPersonPublisher = input.addAction
-            .map {
-                repository.addPerson()
-            }
+            .handleEvents(receiveOutput: {
+                let person = Person(name: input.personName)
+                repository.addPerson(person)
+            })
+            .mapToVoid()
 
         Publishers.Merge(
             input.loadTrigger,
@@ -40,15 +43,28 @@ extension ContentViewModel {
             repository.getPersonList()
                 .asDriver()
         }
+        .map {
+            PersonViewDataTranslator.createPersonViewDataArray(from: $0)
+        }
         .assign(to: \.personList, on: output)
         .store(in: cancelBag)
         
         input.deleteAction
             .sink {
-                repository.delete(object: $0)
+                repository.delete(personID: $0)
             }
             .store(in: cancelBag)
         
         return output
+    }
+}
+
+extension Publisher {
+    
+    func mapToVoid() -> AnyPublisher<Void, Failure> {
+        return map { _ in
+            ()
+        }
+        .eraseToAnyPublisher()
     }
 }
