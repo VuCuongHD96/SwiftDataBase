@@ -12,7 +12,7 @@ struct PersonRepository: SwiftDataBaseRepositoryType {
     
     typealias T = PersonStorage
     
-    var swiftDataManager: SwiftDataManager<PersonStorage> = .init()
+    var swiftDataManager: SwiftDataManager = .shared
 }
 
 extension PersonRepository: PersonRepositoryType {
@@ -45,7 +45,7 @@ struct SchoolRepository: SwiftDataBaseRepositoryType {
     
     typealias T = SchoolStorage
     
-    var swiftDataManager: SwiftDataManager<SchoolStorage> = .init()
+    var swiftDataManager: SwiftDataManager = .shared
 }
 
 extension SchoolRepository {
