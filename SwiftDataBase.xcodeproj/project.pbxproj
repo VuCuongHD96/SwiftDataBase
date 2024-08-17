@@ -19,6 +19,7 @@
 		960E24C22C232E280096ED58 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960E24BB2C232E280096ED58 /* ViewModel.swift */; };
 		9648CA432C5DE0DE00BF6CA2 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9648CA422C5DE0DE00BF6CA2 /* ContentViewModel.swift */; };
 		9679F8CA2C70D5BA00B989E5 /* SchoolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9679F8C92C70D5BA00B989E5 /* SchoolView.swift */; };
+		9679F8CC2C71070900B989E5 /* ModelContainerMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9679F8CB2C71070900B989E5 /* ModelContainerMaker.swift */; };
 		96D0675B2C6CF1E800704949 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D0675A2C6CF1E800704949 /* Person.swift */; };
 		96D0675F2C6CF3D700704949 /* PersonRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D0675E2C6CF3D700704949 /* PersonRepositoryType.swift */; };
 		96D067612C6D03FD00704949 /* PersonViewDataTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D067602C6D03FD00704949 /* PersonViewDataTranslator.swift */; };
@@ -44,6 +45,7 @@
 		960E24BB2C232E280096ED58 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		9648CA422C5DE0DE00BF6CA2 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		9679F8C92C70D5BA00B989E5 /* SchoolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolView.swift; sourceTree = "<group>"; };
+		9679F8CB2C71070900B989E5 /* ModelContainerMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelContainerMaker.swift; sourceTree = "<group>"; };
 		96D0675A2C6CF1E800704949 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		96D0675E2C6CF3D700704949 /* PersonRepositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonRepositoryType.swift; sourceTree = "<group>"; };
 		96D067602C6D03FD00704949 /* PersonViewDataTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewDataTranslator.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				96F657842C1DD9A300476EDC /* SwiftDataManager.swift */,
+				9679F8CB2C71070900B989E5 /* ModelContainerMaker.swift */,
 			);
 			path = DataBase;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				96F657862C1DD9A300476EDC /* SwiftDataManager.swift in Sources */,
 				96D067612C6D03FD00704949 /* PersonViewDataTranslator.swift in Sources */,
 				960E24BD2C232E280096ED58 /* ActivityTracker.swift in Sources */,
+				9679F8CC2C71070900B989E5 /* ModelContainerMaker.swift in Sources */,
 				960E24C02C232E280096ED58 /* ErrorTracker.swift in Sources */,
 				960E24BE2C232E280096ED58 /* CancelBag.swift in Sources */,
 				96F657822C1DD84300476EDC /* SwiftDataBaseRequestType.swift in Sources */,
