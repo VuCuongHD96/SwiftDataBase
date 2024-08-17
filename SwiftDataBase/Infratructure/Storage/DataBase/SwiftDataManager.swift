@@ -9,19 +9,22 @@ import Combine
 import SwiftData
 import Foundation
 
-struct SwiftDataManager<T: PersistentModel> {
+struct SwiftDataManager {
+   
     let container: ModelContainer
     private let context: ModelContext
+    typealias T = any PersistentModel
+    static let shared = SwiftDataManager()
     
     init() {
         do {
-            self.container = try ModelContainer(for: T.self)
+            self.container = try ModelContainerMaker.make()
         } catch(let error) {
             fatalError("Unresolved error \(error), \(error.localizedDescription)")
         }
         context = ModelContext(container)
     }
-    
+
     func fetch<R: SwiftDataBaseRequestType>(input: R) -> Observable<[R.T]> {
         Future<[R.T], Error> { promise in
             do {
@@ -40,12 +43,11 @@ struct SwiftDataManager<T: PersistentModel> {
     
     func delete(object: T) {
         context.delete(object)
-        
     }
     
-    func delete(model: T.Type, where predicate: Predicate<T>) {
+    func delete<T: PersistentModel>(model: T.Type, where predicate: Predicate<T>) {
         do {
-           try context.delete(model: T.self, where: predicate)
+            try context.delete(model: T.self, where: predicate)
         } catch {
             
         }

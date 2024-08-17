@@ -10,7 +10,7 @@ import SwiftData
 
 protocol SwiftDataBaseRepositoryType {
     associatedtype T: PersistentModel
-    var swiftDataManager: SwiftDataManager<T> { get set }
+    var swiftDataManager: SwiftDataManager { get set }
 }
 
 extension SwiftDataBaseRepositoryType {
